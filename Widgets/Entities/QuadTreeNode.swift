@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+// Initial impression is that a QuadTree could be used to represent the entire data structure, but more research and validation are needed.
 extension QuadTreeNode: Hashable {
     static func == (lhs: QuadTreeNode, rhs: QuadTreeNode) -> Bool {
         lhs.id == rhs.id
