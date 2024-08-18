@@ -40,6 +40,7 @@ final class QuadTreeNode {
         return .init(x: x, y: y)
     }
     
+    // TODO: The requirements haven't been fully met; the logic should be placed in the `Calculator`.
     func insertChild(color: Color) -> QuadTreeNode {
         let childCount = children.count
         if childCount >= 9 {
