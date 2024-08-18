@@ -11,4 +11,7 @@ enum AppConstants {
     enum UI {
         static let cornerRadius: CGFloat = 36
     }
+    enum CoordinateSpaces {
+        static let customContainer = "customContainer"
+    }
 }

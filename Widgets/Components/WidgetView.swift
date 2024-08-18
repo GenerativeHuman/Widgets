@@ -17,7 +17,7 @@ struct WidgetView: View {
             .fill(widget.color)
             .frame(width: widget.size.width, height: widget.size.height)
             .gesture(
-                DragGesture(coordinateSpace: .named("full screen"))
+                DragGesture(coordinateSpace: .named(AppConstants.CoordinateSpaces.customContainer))
                     .onChanged { gesture in
                         onDragChanged(widget, gesture.location)
                     }

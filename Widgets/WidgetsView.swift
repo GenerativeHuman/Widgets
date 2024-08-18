@@ -24,7 +24,8 @@ struct WidgetsView: View {
             }
             DraggingWidgetView(widget: viewModel.draggingWidget)
         }
-        .coordinateSpace(name: "full screen")
+        // To provide a consistent reference point for measuring positions and sizes.
+        .coordinateSpace(name: AppConstants.CoordinateSpaces.customContainer)
     }
 }
 
