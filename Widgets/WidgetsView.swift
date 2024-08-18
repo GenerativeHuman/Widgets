@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct WidgetsView: View {
+    @StateObject private var viewModel = WidgetsViewModel()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            VStack {
+                Spacer()
+                DropZoneRectangle(dropZoneColor: viewModel.dropZoneColor, viewModel: viewModel)
+                    .overlay(DropZoneFrameReader(onFrameChange: viewModel.updateDropZoneFrame))
+                    .padding(.horizontal)
+                Spacer()
+                WidgetPaletteView(availableWidgets: viewModel.bottomWidgets,
+                                  onDragChanged: viewModel.handleWidgetDrag,
+                                  onDragEnded: viewModel.handleWidgetDrop)
+            }
+            DraggingWidgetView(widget: viewModel.draggingWidget)
         }
-        .padding()
+        .coordinateSpace(name: "full screen")
     }
 }
 
