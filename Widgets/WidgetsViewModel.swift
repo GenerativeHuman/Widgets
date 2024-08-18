@@ -14,6 +14,7 @@ class WidgetsViewModel: ObservableObject {
     @Published var dropZoneColor: Color?
     @Published var bottomWidgets: [Widget] = Widget.defaultWidgets()
     @Published var node: QuadTreeNode?
+    private let calculator = Calculator()
     
     func handleWidgetDrag(widget: Widget, at location: CGPoint) {
         draggingWidget = Widget(color: widget.color,
@@ -25,14 +26,14 @@ class WidgetsViewModel: ObservableObject {
     func handleWidgetDrop(widget: Widget, at location: CGPoint) {
         if dropZoneFrame.contains(location) {
             if let node {
-                _ = node.insertChild(color: widget.color)
+                self.node = calculator.insertNewWidget(root: node, color: widget.color)
             } else {
-                node = .init(x: 0,
-                             y: 0,
-                             width: dropZoneFrame.width,
-                             height: dropZoneFrame.height,
-                             color: .clear)
-                _ = node?.insertChild(color: widget.color)
+                let root = QuadTreeNode(x: 0,
+                                        y: 0,
+                                        width: dropZoneFrame.width,
+                                        height: dropZoneFrame.height,
+                                        color: .clear)
+                self.node = calculator.insertNewWidget(root: root, color: widget.color)
             }
         }
         resetDragState()
