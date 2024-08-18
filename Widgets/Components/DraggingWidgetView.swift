@@ -13,7 +13,7 @@ struct DraggingWidgetView: View {
     var body: some View {
         Group {
             if let widget = widget {
-                RoundedRectangle(cornerRadius: 25)
+                RoundedRectangle(cornerRadius: AppConstants.UI.cornerRadius)
                     .fill(widget.color)
                     .shadow(color: .black.opacity(0.5), radius: 10, x: 2, y: 2)
                     .frame(width: widget.size.width, height: widget.size.height)

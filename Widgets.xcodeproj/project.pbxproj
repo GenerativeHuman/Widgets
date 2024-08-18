@@ -25,6 +25,7 @@
 		0A62E17B2C7265C200CB765B /* DraggingWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62E17A2C7265C200CB765B /* DraggingWidgetView.swift */; };
 		0A62E17E2C7266AD00CB765B /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62E17D2C7266AD00CB765B /* Calculator.swift */; };
 		0A62E1802C72679B00CB765B /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62E17F2C72679B00CB765B /* CalculatorTests.swift */; };
+		0A62E1822C726E2F00CB765B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62E1812C726E2F00CB765B /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		0A62E17A2C7265C200CB765B /* DraggingWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggingWidgetView.swift; sourceTree = "<group>"; };
 		0A62E17D2C7266AD00CB765B /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		0A62E17F2C72679B00CB765B /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
+		0A62E1812C726E2F00CB765B /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				0A62E17C2C72669A00CB765B /* UseCases */,
 				0A62E16F2C72645300CB765B /* Components */,
 				0A62E16B2C72629F00CB765B /* Color+Extension.swift */,
+				0A62E1812C726E2F00CB765B /* AppConstants.swift */,
 				0A62E1402C725EFC00CB765B /* Assets.xcassets */,
 				0A62E1422C725EFC00CB765B /* Preview Content */,
 			);
@@ -325,6 +328,7 @@
 				0A62E1732C7264CA00CB765B /* WelcomeTextView.swift in Sources */,
 				0A62E13D2C725EFA00CB765B /* WidgetsApp.swift in Sources */,
 				0A62E1752C7264E600CB765B /* DropZoneRectangle.swift in Sources */,
+				0A62E1822C726E2F00CB765B /* AppConstants.swift in Sources */,
 				0A62E1712C72649100CB765B /* DropZoneFrameReader.swift in Sources */,
 				0A62E16A2C72605D00CB765B /* Widget.swift in Sources */,
 			);

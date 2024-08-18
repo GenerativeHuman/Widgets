@@ -14,7 +14,7 @@ struct WidgetPaletteView: View {
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 36.0)
+            RoundedRectangle(cornerRadius: AppConstants.UI.cornerRadius)
                 .fill(Color.white)
                 .frame(height: 72.0)
                 .shadow(radius: 10)
