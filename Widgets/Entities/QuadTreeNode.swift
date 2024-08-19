@@ -44,6 +44,8 @@ final class QuadTreeNode {
     
     // TODO: The requirements haven't been fully met; the logic should be placed in the `Calculator`.
     func insertChild(color: Color) -> QuadTreeNode {
+        // The logic in this method was generated with the assistance of AI.
+        // It doesn't fully meet the requirements and need further adjustment.
         let childCount = children.count
         if childCount >= 9 {
             print("Cannot insert more than 9 children")
