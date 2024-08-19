@@ -18,19 +18,20 @@ class WidgetsViewModel: ObservableObject {
     
     func handleWidgetDrag(widget: Widget, at location: CGPoint) {
         draggingWidget = Widget(color: widget.color,
-                                position: location,
-                                size: CGSize(width: 50, height: 50))
+                                position: location)
         updateDropZoneColor(for: location)
+        // TODO: Using this location, calculate the widget's position and size in real-time.
         // Through this calculation, we can determine which area the object is dragged into.
         if dropZoneFrame.contains(location) {
             let center = CGPoint(x: dropZoneFrame.midX, y: dropZoneFrame.midY)
+            let widgeIn = "Inside"
             if location.x < center.x {
-                let dragArea = location.y < center.y ? "Top Left" : "Bottom Left"
+                let widgeIn = location.y < center.y ? "Top Left" : "Bottom Left"
             } else {
-                let dragArea = location.y < center.y ? "Top Right" : "Bottom Right"
+                let widgeIn = location.y < center.y ? "Top Right" : "Bottom Right"
             }
         } else {
-            let dragArea = "Outside"
+            let widgeIn = "Outside"
         }
     }
     

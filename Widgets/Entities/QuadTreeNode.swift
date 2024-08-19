@@ -25,7 +25,8 @@ final class QuadTreeNode {
     var y: CGFloat
     var width: CGFloat
     var height: CGFloat
-    var color: Color
+    let color: Color
+    // Represent all the widgets within the rectangle.
     var children: [QuadTreeNode]
     
     init(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, color: Color) {
